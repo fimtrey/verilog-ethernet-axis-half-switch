@@ -1,0 +1,43 @@
+version = 1
+SPDX-PackageName = "verilog-ethernet-axis-half-switch"
+SPDX-PackageSupplier = "Tim Frey"
+
+# Hardware design sources and IP metadata
+[[annotations]]
+path = ["src/**", "ip/**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Tim Frey"
+SPDX-License-Identifier = "SHL-0.51"
+
+# Test software
+[[annotations]]
+path = [
+    "tests/**",
+    "pyproject.toml",
+    "uv.lock",
+    "justfile",
+    ".vscode/**",
+    ".verilog_format",
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Tim Frey"
+SPDX-License-Identifier = "Apache-2.0"
+
+# Images and diagrams
+[[annotations]]
+path = ["doc/**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Tim Frey"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# Documentation and repository metadata
+[[annotations]]
+path = [
+    "README.md",
+    "REUSE.toml",
+    ".gitignore",
+    ".gitmodules",
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Tim Frey"
+SPDX-License-Identifier = "CC-BY-4.0"

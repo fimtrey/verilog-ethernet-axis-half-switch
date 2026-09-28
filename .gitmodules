@@ -1,0 +1,4 @@
+[submodule "lib/eth"]
+	path = lib/eth
+	url = https://github.com/vmayoral/verilog-ethernet.git
+	branch = kr260

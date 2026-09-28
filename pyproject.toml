@@ -1,0 +1,42 @@
+# SPDX-FileCopyrightText: 2026 Tim Frey
+# SPDX-License-Identifier: Apache-2.0
+
+[project]
+name = "verilog-ethernet-axis-half-switch"
+version = "1.1.0"
+description = "Layer 2 Ethernet half-switch in Verilog, operating on AXI-Stream interfaces"
+readme = "README.md"
+license = "Apache-2.0"
+authors = [
+    { name = "Tim Frey", email = "timfreyb@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "cocotb>=2.1.0",
+    "cocotbext-axi>=0.1.28",
+    "numpy",
+    "scapy",
+    "dotenv",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.14,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv]
+package = false
+
+[dependency-groups]
+dev = [
+    "reuse[charset-normalizer]>=6.2.0",
+    "verible>=0.0.4071.0",
+]
+
+[tool.ruff]
+exclude = ["lib/"]
+
+[tool.ty.src]
+exclude = ["lib/"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
